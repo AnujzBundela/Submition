@@ -101,7 +101,7 @@
   </script>
 
 
- 
+
   <script>
     document.getElementById("contactForm").addEventListener("submit", async function (e) {
       e.preventDefault();
@@ -111,7 +111,9 @@
       const message = document.getElementById("validationCustom03").value;
 
       try {
-        const response = await fetch("http://192.168.29.9:5000/api/send", {
+        // const response = await fetch("http://192.168.29.9:5000/api/send", {
+        const response = await fetch("https://submitionback-page.up.railway.app/api/send", {
+
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, message }),
@@ -134,3 +136,14 @@
 </body>
 
 </html>
+
+
+<!-- EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+EMAIL_RECEIVER=your-main-email@gmail.com
+
+
+// "scripts": {
+  //   "test": "echo \"Error: no test specified\" && exit 1"
+  // },
+  -->
